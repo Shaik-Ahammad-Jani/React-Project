@@ -1,0 +1,119 @@
+.login-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9;
+    /* background: linear-gradient(120deg, black, white); */
+    border: 2px solid gray;
+}
+.sign-in{
+    text-align: center;
+}
+.input-field{
+    width: 300px;
+    padding: 10px;
+    margin: 10px 10px;
+    position: relative;
+}
+.input-field .input{
+    width: 100%;
+    padding: 12px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+.btnn{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: 0.3s;
+    border: 1px solid;
+}
+.btnn1{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: 0.3s;
+    border: 1px solid;
+}
+.btnn:hover{
+    background-color: #444;
+}
+
+.forgot{
+    text-align: center;
+    
+}
+.have-account{
+    text-align: center;
+    color: blue;
+}
+
+.remember{
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      padding: 20px;
+      border: none;
+    }
+  
+    form {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .input-field {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .btnn, .btnn1 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .login-container {
+      padding: 10px;
+    }
+  
+    .sign-in {
+      font-size: 24px;
+    }
+  
+    .input-field {
+      width: 100%;
+    }
+  
+    .input-field .input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .btnn, .btnn1 {
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+    .forgot a, .have-account p {
+      font-size: 14px;
+    }
+  }
+  
