@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 10px,20px; */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+.nav li {
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.nav li:hover {
+    list-style-type: none;
+    cursor: pointer;
+    border-bottom:3px solid lightblue;
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+}
