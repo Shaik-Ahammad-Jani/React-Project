@@ -1,6 +1,14 @@
     export const apikey="AIzaSyAiLTAGhBQ4uQVgpvoGLWdDaXkh9GlMDLo"
     export const apiurl="https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
 
+    const baseUrl = "https://react-project-backend-2-4rrg.onrender.com"
+
+    const Register = `${baseUrl}/SignUp`
+
+    const Login = `${baseUrl}/Login`
+
+    export {Register,Login,baseUrl}
+
     export const LANGUAGE_VERSIONS = {
         javascript: "18.15.0",
         typescript: "5.0.3",

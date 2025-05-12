@@ -1,0 +1,36 @@
+/* Base adjustments: Use flex column layout on small devices */
+@media (max-width: 768px) {
+    .html-tutorial-container {
+      flex-direction: column;
+    }
+  
+    .html-sidebar {
+      width: 100% !important;
+      min-height: auto;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .html-content {
+      width: 100% !important;
+      min-height: 60vh;
+    }
+  }
+  
+  /* Smartphone-specific tweaks */
+  @media (max-width: 480px) {
+    .html-sidebar button,
+    .html-sidebar .sub-button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .html-content h2 {
+      font-size: 18px;
+    }
+  
+    .html-content pre {
+      font-size: 14px;
+    }
+  }
+  

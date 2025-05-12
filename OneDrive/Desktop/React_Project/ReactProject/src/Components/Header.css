@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     /* margin: 10px,20px; */
+    padding: 5px;
 }
 
 .nav {
@@ -21,6 +22,15 @@
     cursor: pointer;
     border-bottom:3px solid lightblue;
 }
+
+.btnn{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #4f46e5;
+}
+
 @media screen and (max-width: 768px) {
     .nav {
         display: none;

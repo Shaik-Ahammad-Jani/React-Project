@@ -11,7 +11,7 @@ const Sidebar = () => {
   // const [footerExpanded, setFooterExpanded] = useState(false);
 
   return (
-    <div className={`d-flex flex-column bg-dark text-light p-3 ${isExpanded ? "expanded" : "collapsed"}`} id="nav-bar">
+    <div className={`d-flex flex-column  text-light p-3 ${isExpanded ? "expanded" : "collapsed"}`} id="nav-bar">
       {/* Navbar Header */}
       <div className="d-flex align-items-center justify-content-between">
         {/* <a href="https://codepen.io" target="_blank" className="text-light text-decoration-none fs-4">

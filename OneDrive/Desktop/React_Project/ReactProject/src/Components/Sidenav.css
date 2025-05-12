@@ -5,6 +5,7 @@
     transition: width 0.3s ease;
     overflow: hidden;
     position: fixed;
+    background-color: #4f46e5;
   }
   
   #nav-bar.collapsed {

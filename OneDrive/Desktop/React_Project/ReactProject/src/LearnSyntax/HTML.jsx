@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import './All.css'
 // import {
 //   Sheet,
 //   SheetContent,
@@ -587,7 +588,7 @@ const HTML = () => {
           <div key={main} className="mb-2">
             <button
               className="flex items-center w-full text-left px-2 py-1 rounded hover:bg-gray-200"
-              style={{ border: "none", backgroundColor: "blue", color: "white" }}
+              style={{ border: "none", backgroundColor: "#4f46e5", color: "white" }}
               onClick={() => handleMainClick(main)}
             >
               {selectedMain === main ? (
@@ -604,10 +605,10 @@ const HTML = () => {
                   <button
                     className="flex items-center w-full text-left px-2 py-1 rounded hover:bg-gray-100"
                     style={{
-                      border: "none",
+                      border: "1px solid #4f46e5",
                       marginLeft: "20px",
-                      backgroundColor: "green",
-                      color: "white",
+                      backgroundColor: "white",
+                      color:"#4f46e5",
                     }}
                     onClick={() => handleSubClick(sub)}
                   >

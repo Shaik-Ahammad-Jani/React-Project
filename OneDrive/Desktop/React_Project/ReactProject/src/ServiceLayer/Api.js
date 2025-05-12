@@ -1,24 +1,24 @@
-// import { apikey,apiurl } from "./ApiLink"
-// export const api = async () =>{
-//     const responce = await fetch(`${apiurl}?key=${apikey}`, {
-//         method:"POST",
-//         headers:{"Content-type":"application/json"},
-//         body:JSON.stringify({
 
-//             contents:[
-//                 {
-//                     parts:[
-//                         {text:query}
-//                     ]
-//                 }
-//             ]
-//         })
-
-//     } );
-//     return responce.json()
-// }
 import axios from "axios";
 import { LANGUAGE_VERSIONS } from "./ApiLink";
+
+import { Register,Login,baseUrl } from "./ApiLink";
+
+const GetRegisterData =  async (payload)=>{
+  const response = await fetch(Register,payload)
+  const data = await response.json()
+  return data
+}
+
+const GetLoginData =  async (payload)=>{
+  const response = await fetch(Login,payload)
+  const data = await response.json()
+  return data
+}
+
+export {GetRegisterData,GetLoginData}
+
+export 
 
 const API = axios.create({
   baseURL: "https://emkc.org/api/v2/piston",

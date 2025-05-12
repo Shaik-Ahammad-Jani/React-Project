@@ -7,8 +7,12 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { image6 } from "../assets/images";
+import { GetRegisterData } from "../ServiceLayer/Api";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 library.add(faUser, faEnvelope, faLock, faPhone);
 const SignUp = () => {
+  const navigate = useNavigate()
   const [data, setdata] = React.useState({
     name: "",
     email: "",
@@ -19,10 +23,23 @@ const SignUp = () => {
   const handleChange = (e) =>{
     setdata({...data,[e.target.name]:e.target.value})
   }
+  const option ={
+    method:'POST',
+    headers : {"Content-Type":"Application/json"},
+    body:JSON.stringify(data)
+  }
   const handleSubmit = (e) =>{
     e.preventDefault()
     console.log(data)
+  GetRegisterData(option).then(x => {
+    console.log(x);
+    toast.success('Register SuccessFull')
+    navigate('/Login');
+  }).catch(err => console.error(err));
+
   }
+
+  
   return (
     <div>
       <div className="container">
@@ -103,6 +120,7 @@ export default SignUp;
 // import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+
 
 // const SignUp = () => {
 //   return (

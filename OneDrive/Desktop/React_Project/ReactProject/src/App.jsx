@@ -3,6 +3,9 @@
 import Login from './Components/Login.jsx';
 import SignupPage from './Components/SignUp';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import LandingPage from './LandingPage/Landingpage.jsx';
 import { Routes,Route } from 'react-router-dom';
@@ -50,7 +53,7 @@ function App() {
         {/* <Route path='/html' element={<HTML/>}></Route> */}
         {/* <Route path='/compailer' element={<Compailer />}/> */}
       </Routes>
-      
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }

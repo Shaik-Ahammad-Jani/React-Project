@@ -106,7 +106,7 @@ app.post("/LogIn", async (req, res) => {
 
     const isPasswordCorrect = await bcrypt.compare(String(password), user.password);
     if (!isPasswordCorrect) {
-      return res.status(401).json({ message: "Invalid credentials" });
+      return res.status(401).json({ message: "Invalid credentials",status:4001 });
     }
 
     // Generate JWT token using only existing fields

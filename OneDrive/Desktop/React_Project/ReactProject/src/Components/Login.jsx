@@ -5,6 +5,8 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../Firebase/Firebase_config";
+import { GetLoginData } from '../ServiceLayer/Api';
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [data1, setData1] = useState({ email: "", password: "" });
@@ -14,14 +16,34 @@ const Login = () => {
     setData1({ ...data1, [e.target.name]: e.target.value });
   };
 
+  const payload = {
+    method:"POST",
+    headers : {"Content-type":"Application/json"},
+    body : JSON.stringify(data1)
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    GetLoginData(payload).then(x=>{
+      if(x && x.status=== 200){
+        const token = x.token;
+          localStorage.setItem("token", token);
+          localStorage.setItem("user", JSON.stringify(x.user));
+          toast.success("Login successful!");
+          navigate("/Home");
+      }
+      else{
+       toast.error('Invalid User')
+      }
+    }).catch(err=>console.error(err))
+
     try {
       await signInWithEmailAndPassword(auth, data1.email, data1.password);
       console.log("Email/Password Login successful!");
       navigate('/Home');
-    } catch (error) {
-      alert(error.message);
+    }
+     catch (error) {
+      // alert(error.message);
       console.error("Login error:", error);
     }
   };

@@ -14,7 +14,7 @@ const Syntax = () => {
             {languages.map((language) => (
               <div key={language} className="language-card">
                 <h3 className="language-name">{language}</h3>
-                <Link to={`/${language.toLowerCase()}`}>Learn {language}</Link>
+                <Link to={`/${language.toLowerCase()}`} style={{color:"#4f46e5"}}>Learn {language}</Link>
               </div>
             ))}
           </div>
